@@ -20,6 +20,7 @@
 // 	}
 // }
 
+// run as 'node parse.js'
 const subgraphOutput = require('./subgraph-json.json');
 
 const nameTop = subgraphOutput.data.cardTypes[0].name;
@@ -85,5 +86,10 @@ if (holderCount == holderAmountTop && supplyCount == supplyTop) {
     ].map(e => e.join(",")).join("\n");
 
     // Output CSV of the card holders
-    console.log(holderCSV);
+    // console.log(holderCSV);
+    fs = require('fs');
+    fs.writeFile('card_holders.csv', holderCSV, function (err) {
+        if (err) return console.log(err);
+        console.log('csv output written to file');
+    });
 }
