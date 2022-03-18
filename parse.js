@@ -1,23 +1,16 @@
 // GraphAPI
 // https://thegraph.com/explorer/subgraph?id=JBnWrv9pvBvSi2pUZzba3VweGBTde6s44QvsDABP47Gt&view=Playground
 // {
-//   cardTypes(
-//     where: {
-//       name: "Curio1"
-//     }) {
+//   cardTypes(where: {name: "Curio1"}) {
 //     name
 //     supply
 //     balances (first: 1000) {
-//       user {
-//         id
-//       }
-//       type {
-//         name
-//       }
+//       user {id}
+//       type {name}
 //       wrappedBalance
 //       unwrappedBalance
 //     }
-// 	}
+//   }
 // }
 
 // run as 'node parse.js'
